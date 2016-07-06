@@ -12,7 +12,7 @@
 <title>Classified Adds</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link href="css/fileinput.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
 <link href="css/owl.carousel.css" rel="stylesheet">
@@ -63,7 +63,7 @@
 	<script src="js/hideMaxListItem.js"></script>
 
 	<script src="plugins/jquery.fs.scroller/jquery.fs.scroller.js"></script>
-	<script src="plugins/jquery.fs.scroller/jquery.fs.selecter.js"></script>
+	<script src="plugins/jquery.fs.selecter/jquery.fs.selecter.js"></script>
 
 	<script src="js/script.js"></script>
 	<script>

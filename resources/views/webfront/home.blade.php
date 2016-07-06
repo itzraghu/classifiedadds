@@ -1,7 +1,7 @@
 @extends('layouts.webfront.webfront')
 
 @section('page-content')
-
+@include('common.webfront.search')
 <div class="main-container">
 	<div class="container">
 		<div class="col-lg-12 content-box ">
@@ -444,4 +444,5 @@
 										</div>
 									</div>
 
-									@endsection
+@include('common.webfront.footer-top')
+@endsection

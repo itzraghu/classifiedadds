@@ -12,9 +12,9 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="">Login</a></li>
-						<li><a href="">Signup</a></li>
-						<li class="postadd"><a class="btn btn-block   btn-border btn-post btn-danger" href="">Post Free Add</a></li>
+						<li><a href="/login">Login</a></li>
+						<li><a href="/signup">Signup</a></li>
+						<li class="postadd"><a class="btn btn-block   btn-border btn-post btn-danger" href="/post-free-add">Post Free Add</a></li>
 					</ul>
 				</div>
 
