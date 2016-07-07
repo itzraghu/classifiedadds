@@ -5,6 +5,7 @@ namespace App;
 use Laravel\Cashier\Billable;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
@@ -28,4 +29,20 @@ class User extends Authenticatable
     protected $hidden = [
     'password', 'remember_token',
     ];
+
+    public static function is_email_verify($email)
+    {
+        $result = DB::table('users')->where('email','=',$email)->first();
+        if(count($result)>0){
+
+            return  $result->is_email_verify;
+        }
+    }
+    public static function is_mobile_verify($email)
+    {
+        $result = DB::table('users')->where('email','=',$email)->first();
+        if(count($result)>0){
+            return  $result->is_mobile_verify;
+        }
+    }
 }

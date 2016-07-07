@@ -13,9 +13,12 @@
 
 Route::get('/','WebfrontController@gethome');
 Route::get('/login','WebfrontController@get_login');
+Route::post('/login','WebfrontController@login');
 Route::get('/forgot-password','WebfrontController@get_forgot_password');
 Route::get('/signup','WebfrontController@get_signup');
+Route::post('/signup','WebfrontController@signup');
 Route::get('/post-free-add','WebfrontController@get_adds_form');
+Route::post('/post_free_add','WebfrontController@save_add');
 Route::get('/category','WebfrontController@get_category');
 Route::get('/single-adds','WebfrontController@get_single_adds');
 Route::get('/about-us','WebfrontController@get_about_us');
@@ -25,11 +28,7 @@ Route::get('/contact-us','WebfrontController@get_contact_us');
 Route::get('/faq','WebfrontController@get_faq');
 
 
-/*-------- User acoount ---------*/
 
-Route::get('/MyAccount','UserController@get_my_account');
-Route::get('/MyAdds','UserController@get_my_adds');
-Route::get('/statements','UserController@get_statements');
 
 
 
