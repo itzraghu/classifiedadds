@@ -25,7 +25,11 @@ Route::get('/contact-us','WebfrontController@get_contact_us');
 Route::get('/faq','WebfrontController@get_faq');
 
 
+/*-------- User acoount ---------*/
 
+Route::get('/MyAccount','UserController@get_my_account');
+Route::get('/MyAdds','UserController@get_my_adds');
+Route::get('/statements','UserController@get_statements');
 
 
 

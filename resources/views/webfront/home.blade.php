@@ -8,53 +8,53 @@
 			<div class="row row-featured row-featured-category">
 				<div class="col-lg-12  box-title no-border">
 					<div class="inner"><h2><span>Browse by</span>
-						Category <a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html" class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
+						Category <a href="/category"  class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-					<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/car-2.jpg" class="img-responsive" alt="img">
+					<a href="/category" ><img src="images/car-2.jpg" class="img-responsive" alt="img">
 						<h6> Automobiles </h6></a>
 					</div>
 					<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-						<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/laptop-2.jpg" class="img-responsive" alt="img"> <h6> Laptops </h6></a>
+						<a href="/category" ><img src="images/laptop-2.jpg" class="img-responsive" alt="img"> <h6> Laptops </h6></a>
 					</div>
 					<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-						<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/mobile.jpg" class="img-responsive" alt="img">
+						<a href="/category" ><img src="images/mobile.jpg" class="img-responsive" alt="img">
 							<h6> Mobiles </h6></a>
 						</div>
 						<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-							<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/tv.jpg" class="img-responsive" alt="img"> <h6>
+							<a href="/category"><img src="images/tv.jpg" class="img-responsive" alt="img"> <h6>
 								Electronics </h6></a>
 							</div>
 							<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-								<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/hdd.jpg" class="img-responsive" alt="img">
+								<a href="/category" ><img src="images/hdd.jpg" class="img-responsive" alt="img">
 									<h6> Computer Accessories </h6></a>
 								</div>
 								<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-									<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/house.jpg" class="img-responsive" alt="img">
+									<a href="/category" ><img src="images/house.jpg" class="img-responsive" alt="img">
 										<h6> Real Estate </h6></a>
 									</div>
 									<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-										<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/Home-Electronics-Appliances-2.jpg" class="img-responsive" alt="img"> <h6> Home Appliances </h6></a>
+										<a href="/category" ><img src="images/Home-Electronics-Appliances-2.jpg" class="img-responsive" alt="img"> <h6> Home Appliances </h6></a>
 									</div>
 									<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-										<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/camera.jpg" class="img-responsive" alt="img">
+										<a href="/category" ><img src="images/camera.jpg" class="img-responsive" alt="img">
 											<h6> Cameras </h6></a>
 										</div>
 										<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-											<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/fashion.jpg" class="img-responsive" alt="img">
+											<a href="/category" ><img src="images/fashion.jpg" class="img-responsive" alt="img">
 												<h6> Fashion &amp; Beauty </h6></a>
 											</div>
 											<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-												<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/toy.jpg" class="img-responsive" alt="img">
+												<a href="/category" ><img src="images/toy.jpg" class="img-responsive" alt="img">
 													<h6> Kids &amp; Baby Products </h6></a>
 												</div>
 												<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-													<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/jobs.jpg" class="img-responsive" alt="img">
+													<a href="/category" ><img src="images/jobs.jpg" class="img-responsive" alt="img">
 														<h6> Jobs </h6></a>
 													</div>
 													<div class="col-lg-2 col-md-3 col-sm-3 col-xs-4 f-category" style="height: 162px;">
-														<a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/catalog.jpg" class="img-responsive" alt="img">
+														<a href="/category" ><img src="images/catalog.jpg" class="img-responsive" alt="img">
 															<h6> Home &amp; Furniture </h6></a>
 														</div>
 													</div>
@@ -63,7 +63,7 @@
 												<div class="col-lg-12 content-box ">
 													<div class="row row-featured">
 														<div class="col-lg-12  box-title ">
-															<div class="inner"><h2><span>Sponsored </span>Products <a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html" class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
+															<div class="inner"><h2><span>Sponsored </span>Products <a href="/category"  class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
 															</div>
 														</div>
 														<div style="clear: both"></div>
@@ -137,44 +137,44 @@
 																<div class="col-lg-12 tab-inner">
 																	<div class="row">
 																		<ul class="cat-list col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Atlanta</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Dallas </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> New York </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Santa Ana/Anaheim </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Wichita </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Anchorage </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Miami </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Los Angeles</a></li>
+																			<li><a href="/category" >Atlanta</a></li>
+																			<li><a href="/category" > Dallas </a></li>
+																			<li><a href="/category" > New York </a></li>
+																			<li><a href="/category" >Santa Ana/Anaheim </a></li>
+																			<li><a href="/category" >Wichita </a></li>
+																			<li><a href="/category" > Anchorage </a></li>
+																			<li><a href="/category" > Miami </a></li>
+																			<li><a href="/category" >Los Angeles</a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
 																		</ul>
 																	</div>
 																</div>
@@ -183,44 +183,44 @@
 																<div class="col-lg-12 tab-inner">
 																	<div class="row">
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																		<ul class="cat-list col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Atlanta</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Wichita </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Anchorage </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Dallas </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> New York </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Santa Ana/Anaheim </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Miami </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Los Angeles</a></li>
+																			<li><a href="/category" >Atlanta</a></li>
+																			<li><a href="/category" >Wichita </a></li>
+																			<li><a href="/category" > Anchorage </a></li>
+																			<li><a href="/category" > Dallas </a></li>
+																			<li><a href="/category" > New York </a></li>
+																			<li><a href="/category" >Santa Ana/Anaheim </a></li>
+																			<li><a href="/category" > Miami </a></li>
+																			<li><a href="/category" >Los Angeles</a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																	</div>
 																</div>
@@ -229,44 +229,44 @@
 																<div class="col-lg-12 tab-inner">
 																	<div class="row">
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																		<ul class="cat-list col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Atlanta</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Wichita </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Anchorage </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Dallas </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> New York </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Santa Ana/Anaheim </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Miami </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Los Angeles</a></li>
+																			<li><a href="/category" >Atlanta</a></li>
+																			<li><a href="/category" >Wichita </a></li>
+																			<li><a href="/category" > Anchorage </a></li>
+																			<li><a href="/category" > Dallas </a></li>
+																			<li><a href="/category" > New York </a></li>
+																			<li><a href="/category" >Santa Ana/Anaheim </a></li>
+																			<li><a href="/category" > Miami </a></li>
+																			<li><a href="/category" >Los Angeles</a></li>
 																		</ul>
 																		<ul class="cat-list cat-list-border col-sm-3  col-xs-6 col-xxs-12">
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Virginia Beach </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> San Diego </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Boston </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Houston</a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Salt Lake City </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">San Francisco </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tampa </a></li>
-																			<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Washington DC </a></li>
+																			<li><a href="/category" >Virginia Beach </a></li>
+																			<li><a href="/category" > San Diego </a></li>
+																			<li><a href="/category" >Boston </a></li>
+																			<li><a href="/category" >Houston</a></li>
+																			<li><a href="/category" >Salt Lake City </a></li>
+																			<li><a href="/category" >San Francisco </a></li>
+																			<li><a href="/category" >Tampa </a></li>
+																			<li><a href="/category" > Washington DC </a></li>
 																		</ul>
 																	</div>
 																</div>
@@ -284,131 +284,131 @@
 												<div class="row">
 													<div class="col-md-4 col-sm-4 ">
 														<div class="cat-list">
-															<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="fa fa-car ln-shadow"></i>
+															<h3 class="cat-title"><a href="/category" ><i class="fa fa-car ln-shadow"></i>
 																Automobiles <span class="count">277,959</span> </a>
 																<span data-target=".cat-id-1" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 															</h3>
 															<ul class="cat-collapse collapse in cat-id-1" style="height: auto;">
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Car Parts &amp; Accessories</a></li>
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Campervans &amp; Caravans</a></li>
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Motorbikes &amp; Scooters</a></li>
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Motorbike Parts &amp; Accessories</a></li>
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Vans, Trucks &amp; Plant</a></li>
-																<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Wanted</a></li>
+																<li><a href="/category" >Car Parts &amp; Accessories</a></li>
+																<li><a href="/category" >Campervans &amp; Caravans</a></li>
+																<li><a href="/category" >Motorbikes &amp; Scooters</a></li>
+																<li><a href="/category" >Motorbike Parts &amp; Accessories</a></li>
+																<li><a href="/category" >Vans, Trucks &amp; Plant</a></li>
+																<li><a href="/category" >Wanted</a></li>
 															</ul>
 														</div>
 														<div class="cat-list">
-															<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="icon-home ln-shadow"></i>
+															<h3 class="cat-title"><a href="/category" ><i class="icon-home ln-shadow"></i>
 																Property <span class="count">228,705</span></a> <span data-target=".cat-id-2" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span></h3>
 																<ul class="cat-collapse collapse in cat-id-2" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">House for Rent</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">House for Sale </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Apartments For Sale </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Apartments for Rent </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Farms-Ranches </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Land </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Vacation Rentals </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Commercial Building</a></li>
+																	<li><a href="/category" >House for Rent</a></li>
+																	<li><a href="/category" >House for Sale </a></li>
+																	<li><a href="/category" > Apartments For Sale </a></li>
+																	<li><a href="/category" >Apartments for Rent </a></li>
+																	<li><a href="/category" >Farms-Ranches </a></li>
+																	<li><a href="/category" >Land </a></li>
+																	<li><a href="/category" >Vacation Rentals </a></li>
+																	<li><a href="/category" >Commercial Building</a></li>
 																</ul>
 															</div>
 															<div class="cat-list">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="icon-home ln-shadow"></i>
+																<h3 class="cat-title"><a href="/category" ><i class="icon-home ln-shadow"></i>
 																	Jobs <span class="count">6375</span></a>
 																	<span data-target=".cat-id-3" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-3" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Full Time Jobs</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Internet Jobs </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Learn &amp; Earn jobs </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Manual Labor Jobs </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Other Jobs </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">OwnBusiness </a></li>
+																	<li><a href="/category" >Full Time Jobs</a></li>
+																	<li><a href="/category" >Internet Jobs </a></li>
+																	<li><a href="/category" >Learn &amp; Earn jobs </a></li>
+																	<li><a href="/category" > Manual Labor Jobs </a></li>
+																	<li><a href="/category" >Other Jobs </a></li>
+																	<li><a href="/category" >OwnBusiness </a></li>
 																</ul>
 															</div>
 														</div>
 														<div class="col-md-4 col-sm-4">
 															<div class="cat-list">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="fa fa-briefcase ln-shadow"></i> Services <span class="count">45,526</span></a>
+																<h3 class="cat-title"><a href="/category" ><i class="fa fa-briefcase ln-shadow"></i> Services <span class="count">45,526</span></a>
 																	<span data-target=".cat-id-4" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-4" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Building, Home &amp; Removals</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Entertainment</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Health &amp; Beauty</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Miscellaneous</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Property &amp; Shipping</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tax, Money &amp; Visas</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Telecoms &amp; Computers</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Travel Services &amp; Tours</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tuition &amp; Lessons</a></li>
+																	<li><a href="/category" >Building, Home &amp; Removals</a></li>
+																	<li><a href="/category" >Entertainment</a></li>
+																	<li><a href="/category" >Health &amp; Beauty</a></li>
+																	<li><a href="/category" >Miscellaneous</a></li>
+																	<li><a href="/category" >Property &amp; Shipping</a></li>
+																	<li><a href="/category" >Tax, Money &amp; Visas</a></li>
+																	<li><a href="/category" >Telecoms &amp; Computers</a></li>
+																	<li><a href="/category" >Travel Services &amp; Tours</a></li>
+																	<li><a href="/category" >Tuition &amp; Lessons</a></li>
 																</ul>
 															</div>
 															<div class="cat-list">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="icon-book-open ln-shadow"></i> Learning <span class="count">26,529</span></a> <span data-target=".cat-id-5" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
+																<h3 class="cat-title"><a href="/category" ><i class="icon-book-open ln-shadow"></i> Learning <span class="count">26,529</span></a> <span data-target=".cat-id-5" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-5" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Automotive Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Computer Multimedia Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Sports Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Home Improvement Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Language Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Music Classes </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Personal Fitness </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"> Other Classes </a></li>
+																	<li><a href="/category" > Automotive Classes </a></li>
+																	<li><a href="/category" > Computer Multimedia Classes </a></li>
+																	<li><a href="/category" > Sports Classes </a></li>
+																	<li><a href="/category" > Home Improvement Classes </a></li>
+																	<li><a href="/category" > Language Classes </a></li>
+																	<li><a href="/category" > Music Classes </a></li>
+																	<li><a href="/category" > Personal Fitness </a></li>
+																	<li><a href="/category" > Other Classes </a></li>
 																</ul>
 															</div>
 															<div class="cat-list">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class="icon-guidedog ln-shadow"></i> Pets <span class="count">42,111</span></a>
+																<h3 class="cat-title"><a href="/category" ><i class="icon-guidedog ln-shadow"></i> Pets <span class="count">42,111</span></a>
 																	<span data-target=".cat-id-6" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-6" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Pets for Sale</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Petsitters &amp; Dogwalkers</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Equipment &amp; Accessories</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Missing, Lost &amp; Found</a></li>
+																	<li><a href="/category" >Pets for Sale</a></li>
+																	<li><a href="/category" >Petsitters &amp; Dogwalkers</a></li>
+																	<li><a href="/category" >Equipment &amp; Accessories</a></li>
+																	<li><a href="/category" >Missing, Lost &amp; Found</a></li>
 																</ul>
 															</div>
 														</div>
 														<div class="col-md-4 col-sm-4   last-column">
 															<div class="cat-list">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class=" icon-basket-1 ln-shadow"></i> For Sale <span class="count">64,526</span></a> <span data-target=".cat-id-7" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
+																<h3 class="cat-title"><a href="/category" ><i class=" icon-basket-1 ln-shadow"></i> For Sale <span class="count">64,526</span></a> <span data-target=".cat-id-7" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-7" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Audio &amp; Stereo</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Baby &amp; Kids Stuff</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">CDs, DVDs, Games &amp; Books</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Clothes, Footwear &amp; Accessories</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Computers &amp; Software</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Home &amp; Garden</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Music &amp; Instruments</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Office Furniture &amp; Equipment</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Phones, Mobile Phones &amp; Telecoms</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Sports, Leisure &amp; Travel</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tickets</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">TV, DVD &amp; Cameras</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Video Games &amp; Consoles</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Freebies</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Miscellaneous Goods</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Stuff Wanted</a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Swap Shop</a></li>
+																	<li><a href="/category" >Audio &amp; Stereo</a></li>
+																	<li><a href="/category" >Baby &amp; Kids Stuff</a></li>
+																	<li><a href="/category" >CDs, DVDs, Games &amp; Books</a></li>
+																	<li><a href="/category" >Clothes, Footwear &amp; Accessories</a></li>
+																	<li><a href="/category" >Computers &amp; Software</a></li>
+																	<li><a href="/category" >Home &amp; Garden</a></li>
+																	<li><a href="/category" >Music &amp; Instruments</a></li>
+																	<li><a href="/category" >Office Furniture &amp; Equipment</a></li>
+																	<li><a href="/category" >Phones, Mobile Phones &amp; Telecoms</a></li>
+																	<li><a href="/category" >Sports, Leisure &amp; Travel</a></li>
+																	<li><a href="/category" >Tickets</a></li>
+																	<li><a href="/category" >TV, DVD &amp; Cameras</a></li>
+																	<li><a href="/category" >Video Games &amp; Consoles</a></li>
+																	<li><a href="/category" >Freebies</a></li>
+																	<li><a href="/category" >Miscellaneous Goods</a></li>
+																	<li><a href="/category" >Stuff Wanted</a></li>
+																	<li><a href="/category" >Swap Shop</a></li>
 																</ul>
 															</div>
 															<div class="cat-list ">
-																<h3 class="cat-title"><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><i class=" icon-theatre ln-shadow"></i> Community <span class="count">5,30</span> </a> <span data-target=".cat-id-8" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
+																<h3 class="cat-title"><a href="/category" ><i class=" icon-theatre ln-shadow"></i> Community <span class="count">5,30</span> </a> <span data-target=".cat-id-8" data-toggle="collapse" class="btn-cat-collapsed collapsed"> <span class=" icon-down-open-big"></span> </span>
 																</h3>
 																<ul class="cat-collapse collapse in cat-id-8" style="height: auto;">
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Announcements </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Car Pool - Bike Ride </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Charity - Donate - NGO </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Lost - Found </a></li>
-																	<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html">Tender Notices </a></li>
+																	<li><a href="/category" >Announcements </a></li>
+																	<li><a href="/category" >Car Pool - Bike Ride </a></li>
+																	<li><a href="/category" >Charity - Donate - NGO </a></li>
+																	<li><a href="/category" >Lost - Found </a></li>
+																	<li><a href="/category" >Tender Notices </a></li>
 																</ul>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="inner-box has-aff relative">
-													<a class="dummy-aff-img" href="http://templatecycle.com/demo/bootclassified-v1.4/dist/category.html"><img src="images/aff2.jpg" class="img-responsive" alt=" aff"> </a>
+													<a class="dummy-aff-img" href="/category" ><img src="images/aff2.jpg" class="img-responsive" alt=" aff"> </a>
 												</div>
 											</div>
 											<div class="col-sm-3 page-sidebar col-thin-left">
