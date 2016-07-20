@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\User;
+use App\Adds;
 use App\Category;
 use App\Locations;
 use App\SubCategory;
@@ -19,6 +20,11 @@ class AdminController extends Controller
 	public function get_categories(){
 		$categories = Category::all();
 		return view('admin.cetegory',['categories'=>$categories]);
+	}
+
+	public function get_adds(){
+		$adds = Adds::all();
+		return view('admin.adds',['adds'=>$adds]);
 	}
 
 	public function get_locations(){
@@ -284,6 +290,33 @@ class AdminController extends Controller
 		}
 		
 	}
+
+	public function delete_add($id){
+		$add = Adds::find($id);
+		if($add->delete()){
+			return redirect('/admin/get_adds')->with('success','Add Deleted Successfully!');
+		}
+		
+	}
+
+	public function enable_add($adds_id){
+		
+		$add = Adds::find($adds_id);
+		$add->is_approved = 1;
+		if($add->save()){
+			return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+		}
+	}
+	public function disable_add($id){
+		$add = Adds::find($id);
+		$add->is_approved = 0;
+		if($add->save()){
+			return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+		}
+	}
+
+	
+
 
 	public function get_edit_location($id){
 		$locations = Locations::find($id);

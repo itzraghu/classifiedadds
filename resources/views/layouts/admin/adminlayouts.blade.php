@@ -180,6 +180,8 @@
 
                         <li class="{{isActiveRoute('admin/add_location')}}"><a href="{{URL('admin/add_location')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Add Locations</p></a></li>
 
+                        <li class="{{isActiveRoute('admin/get_adds')}}"><a href="{{URL('admin/get_adds')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Adds</p></a></li>
+
 
 
                     </ul>

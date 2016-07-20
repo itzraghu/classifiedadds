@@ -49,6 +49,8 @@ Route::group(['prefix' => 'admin'], function () {
 	// Route::get('category', 'AdminController@get_category');
 	Route::get('get_categories', 'AdminController@get_categories');
 	Route::get('get_sub_categories', 'AdminController@get_sub_categories');
+	Route::get('get_adds', 'AdminController@get_adds');
+
 
 	Route::get('add_category', 'AdminController@add_categories');
 	Route::post('add_category', 'AdminController@add_category');
@@ -74,9 +76,14 @@ Route::group(['prefix' => 'admin'], function () {
 	Route::post('add_location', 'AdminController@add_location');
 
 	Route::get('delete_location/{id}', 'AdminController@delete_location');
+	Route::get('delete_add/{id}', 'AdminController@delete_add');
 
 	Route::get('enable_location/{id}', 'AdminController@enable_location');
 	Route::get('disable_location/{id}', 'AdminController@disable_location');
+
+	Route::get('enable_add/{adds_id}', 'AdminController@enable_add');
+	Route::get('disable_add/{adds_id}', 'AdminController@disable_add');
+
 
 	Route::get('get_edit_location/{id}', 'AdminController@get_edit_location');
 	Route::post('edit_location', 'AdminController@edit_location');

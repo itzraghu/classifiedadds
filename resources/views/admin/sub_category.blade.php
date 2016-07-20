@@ -27,7 +27,12 @@
 @section('page-content')
 
 <div id="main-wrapper">
-
+	@if(Session::has('success'))
+	<div class="alert alert-success">
+		{{Session::get('success') }}
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	</div>
+	@endif
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 

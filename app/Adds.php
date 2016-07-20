@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Adds extends Model
 {
-    protected $table = "adds_info";
-    protected $primarykey = "adds_id";
+	protected $table = "adds_info";
+
+	protected $primaryKey = 'adds_id';
 }

@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Auth;
+use DB;
 use Session;
 use Validator;
 use Hash;
@@ -236,11 +237,19 @@ class WebfrontController extends Controller
 		$all_locations = Locations::all();
 		$categories = Category::where('category_name','=',$category)->first();
 		$sub_categories = SubCategory::where('category_id','=',$categories->category_id)->get();
+
+		
+		$adds = DB::table('adds_info')
+		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
+		->leftJoin('locations', 'adds_info.location', '=', 'locations.id')
+		->where('categories.category_id', '=', $categories->category_id)
+		->paginate(15);
 		$pageData['all_category'] = $all_category; 
 		$pageData['all_locations'] = $all_locations; 
 		$pageData['categories'] = $categories; 
 		$pageData['sub_categories'] = $sub_categories; 
-
+		$pageData['adds'] = $adds; 
+		// dd($adds);
 		return view('webfront.category',$pageData);		
 	}
 
