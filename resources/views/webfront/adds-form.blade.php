@@ -80,7 +80,7 @@
                         <div class="form-group">
                           <label class="col-md-3 control-label" for="price">Price</label>
                           <div class="col-md-4">
-                            <div class="input-group"><span class="input-group-addon">$</span>
+                            <div class="input-group"><span class="input-group-addon">Rs</span>
                               <input id="price" name="price" value="{{Request::old('price')}}" class="form-control" placeholder="placeholder"  type="text">
                               @if($errors->first('price')) 
                               <p class="label label-danger" >
@@ -272,7 +272,8 @@
                               @endif
                             </div>
                           </div>
-                          <div class="well">
+                  {{-- 
+        <div class="well">
                             <h3><i class=" icon-certificate icon-color-1"></i> Make your Ad Premium
                             </h3>
                             <p>Premium ads help sellers promote their product or service by getting
@@ -339,58 +340,66 @@
                                       </tbody></table>
                                     </div>
                                   </div>
+                                  --}}
 
                                   <div class="form-group">
                                     <label class="col-md-3 control-label">Terms</label>
                                     <div class="col-md-8">
                                       <label class="checkbox-inline" for="checkboxes-0">
-                                        <input name="checkboxes" id="checkboxes-0" value="Remember above contact information." type="checkbox">
-                                        Remember above contact information. </label>
-                                      </div>
-                                    </div>
+                                        <input name="Terms" id="checkboxes-0" value="1" type="checkbox">
+                                        Remember above contact information. </label><br>
+                                        @if($errors->first('Terms')) 
+                                        <p class="label label-danger" >
+                                          {{ $errors->first('Terms') }} 
 
-                                    <div class="form-group">
-                                      <label class="col-md-3 control-label"></label>
-                                      <div class="col-md-8"><input type="submit" class="btn btn-success btn-lg" value="Submit"></div>
-                                    </div>
-                                  </fieldset>
-                                </form>
+                                        </p>
+                                        @endif
+
+                                      </div>
+                                      <br>
+                                      <br>
+                                      <div class="form-group">
+                                        <label class="col-md-3 control-label"></label>
+                                        <div class="col-md-8"><input type="submit" class="btn btn-success btn-lg" value="Submit"></div>
+                                      </div>
+                                    </fieldset>
+                                  </form>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div class="col-md-3 reg-sidebar">
-                          <div class="reg-sidebar-inner text-center">
-                            <div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
-                              <h3><strong>Post a Free Classified</strong></h3>
-                              <p> Post your free online classified ads with us. Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. </p>
-                              </div>
-                              <div class="panel sidebar-panel">
-                                <div class="panel-heading uppercase">
-                                  <small><strong>How to sell quickly?</strong></small>
+                          <div class="col-md-3 reg-sidebar">
+                            <div class="reg-sidebar-inner text-center">
+                              <div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
+                                <h3><strong>Post a Free Classified</strong></h3>
+                                <p> Post your free online classified ads with us. Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit. </p>
                                 </div>
-                                <div class="panel-content">
-                                  <div class="panel-body text-left">
-                                    <ul class="list-check">
-                                      <li> Use a brief title and description of the item</li>
-                                      <li> Make sure you post in the correct category</li>
-                                      <li> Add nice photos to your ad</li>
-                                      <li> Put a reasonable price</li>
-                                      <li> Check the item before publish</li>
-                                    </ul>
+                                <div class="panel sidebar-panel">
+                                  <div class="panel-heading uppercase">
+                                    <small><strong>How to sell quickly?</strong></small>
+                                  </div>
+                                  <div class="panel-content">
+                                    <div class="panel-body text-left">
+                                      <ul class="list-check">
+                                        <li> Use a brief title and description of the item</li>
+                                        <li> Make sure you post in the correct category</li>
+                                        <li> Add nice photos to your ad</li>
+                                        <li> Put a reasonable price</li>
+                                        <li> Check the item before publish</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
+
                           </div>
 
                         </div>
 
                       </div>
 
-                    </div>
-
-                    @endsection                }
-                  }
+                      @endsection                }
+                    }

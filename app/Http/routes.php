@@ -23,7 +23,7 @@ Route::post('/signup','WebfrontController@signup');
 Route::get('/post-free-add','WebfrontController@get_adds_form');
 Route::post('/post_free_add','WebfrontController@save_add');
 Route::get('/category/{category}','WebfrontController@get_category');
-Route::get('/single-adds','WebfrontController@get_single_adds');
+Route::get('/single-adds/{slug}','WebfrontController@get_single_adds');
 Route::get('/about-us','WebfrontController@get_about_us');
 Route::get('/terms-and-conditions','WebfrontController@get_terms_and_conditions');
 Route::get('/privacy-policy','WebfrontController@get_privacy_policy');

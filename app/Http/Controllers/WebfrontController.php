@@ -6,6 +6,7 @@ use App\Category;
 use App\SubCategory;
 use App\Locations;
 use App\Adds;
+use App\Image;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -173,14 +174,15 @@ class WebfrontController extends Controller
 			array(
 
 				'category_id' =>'required',
-				'adds_title' =>'required|min:10',
-				'adds_description' =>'required|min:100',
+				'adds_title' =>'required',
+				'adds_description' =>'required',
 				'price' =>'required',
 				'seller_name' =>'required',
 				'seller_email' =>'required|email|unique:users,email',
 				'seller_phone' =>'required|min:10|max:10',
 				'location' =>'required',
 				'city' =>'required',
+				'Terms' =>'accepted',
 				)
 			);
 
@@ -198,6 +200,7 @@ class WebfrontController extends Controller
 			$adds->category_id=$request->category_id;
 			$adds->adds_type=$request->adds_type;
 			$adds->adds_title=$request->adds_title;
+			$adds->slug=str_replace(" ","-",$request->adds_title).rand(0,1000);
 			$adds->adds_description=$request->adds_description;
 			$adds->adds_description=$request->adds_description;
 			$adds->price=$request->price;
@@ -211,51 +214,70 @@ class WebfrontController extends Controller
 
 			$adds->location=$request->location;
 			$adds->city=$request->city;
-			if($adds->save()){
-				if ($request->file('file1')){ $files[] = $request->file('file1'); }
-				if ($request->file('file2')) { $files[] = $request->file('file2'); }
-				if ($request->file('file3')) { $files[] = $request->file('file3'); }
-				if ($request->file('file4')) { $files[] = $request->file('file4'); }
-				if ($request->file('file5')) { $files[] = $request->file('file5'); }
+			$adds->save();
 
+			$files =array();
+			if ($request->file('file1')){ $files[] = $request->file('file1'); }
+			if ($request->file('file2')) { $files[] = $request->file('file2'); }
+			if ($request->file('file3')) { $files[] = $request->file('file3'); }
+			if ($request->file('file4')) { $files[] = $request->file('file4'); }
+			if ($request->file('file5')) { $files[] = $request->file('file5'); }
+			if(count($files)>0){
 				foreach ($files as $file)
 				{
-					$file->move(base_path().'/public/images/adds', $file->getClientOriginalName());
+					$img = new Image();
+					$filename = str_replace(' ', '', $file->getClientOriginalName());
+					$extension = $file->getClientOriginalExtension();
+					$path = 'images/adds/'.$filename.date('U').'.'.$extension;
+					$file->move(base_path().'/public/images/adds', $path);
+					$img->adds_id = $adds->adds_id;
+					$img->img_path = $path;
+					$img->save();
 
 				}
-
-				return redirect('/post-free-add')
-				->with('success','Your Post Added Successfully!');
 			}
+
+			return redirect('/post-free-add')
+			->with('success','Your Post Added Successfully!');
 
 		}
 
 	}
 
 	public function get_category($category){
-		$all_category = Category::all();
-		$all_locations = Locations::all();
+		$all_category = Category::where('is_active','=','1')->get();
+		$all_locations = Locations::where('is_active','=','1')->get();
 		$categories = Category::where('category_name','=',$category)->first();
 		$sub_categories = SubCategory::where('category_id','=',$categories->category_id)->get();
 
-		
-		$adds = DB::table('adds_info')
+
+		$adds = DB::table('adds_info')->where('adds_info.is_approved', '=', 1)
 		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
 		->leftJoin('locations', 'adds_info.location', '=', 'locations.id')
 		->where('categories.category_id', '=', $categories->category_id)
+
 		->paginate(15);
 		$pageData['all_category'] = $all_category; 
 		$pageData['all_locations'] = $all_locations; 
 		$pageData['categories'] = $categories; 
 		$pageData['sub_categories'] = $sub_categories; 
 		$pageData['adds'] = $adds; 
-		// dd($adds);
 		return view('webfront.category',$pageData);		
 	}
 
-	public function get_single_adds(){
+	public function get_single_adds($slug){
 
-		return view('webfront.single-add');
+		$id = DB::table('adds_info')->where('adds_info.slug', '=', $slug)->first();
+		$adds = DB::table('adds_info')->where('adds_info.adds_id', '=', $id->adds_id)
+		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
+		->leftJoin('locations', 'adds_info.location', '=', 'locations.id')
+		->first();
+
+		$images = DB::table('images')->where('images.adds_id', '=', $id->adds_id)->get();
+
+		$pageData['adds'] = $adds;
+		$pageData['images'] = $images;
+		return view('webfront.single-add',$pageData);
 	}
 
 	public function get_about_us(){
