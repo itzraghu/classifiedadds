@@ -160,11 +160,16 @@ class WebfrontController extends Controller
 	}
 
 	public function get_adds_form(){
-		$categories = Category::where('is_active','=','1')->get();
-		$locations = Locations::where('is_active','=','1')->get();
-		$pageData['categories'] = $categories;
-		$pageData['locations'] = $locations;
-		return view('webfront.adds-form',$pageData);
+		if(Auth::check()){
+			$categories = Category::where('is_active','=','1')->get();
+			$locations = Locations::where('is_active','=','1')->get();
+			$pageData['categories'] = $categories;
+			$pageData['locations'] = $locations;
+			return view('webfront.adds-form',$pageData);
+		}
+		else{
+			return redirect('login');
+		}
 
 	}
 	public function save_add(Request $request){
@@ -178,7 +183,7 @@ class WebfrontController extends Controller
 				'adds_description' =>'required',
 				'price' =>'required',
 				'seller_name' =>'required',
-				'seller_email' =>'required|email|unique:users,email',
+				'seller_email' =>'required|email',
 				'seller_phone' =>'required|min:10|max:10',
 				'location' =>'required',
 				'city' =>'required',
