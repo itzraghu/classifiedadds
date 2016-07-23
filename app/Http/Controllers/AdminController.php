@@ -3,54 +3,116 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Adds;
 use App\Category;
-use App\Locations;
+use App\City;
 use App\SubCategory;
 use Validator;
 use DB;
+use Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 class AdminController extends Controller
 {
 	public function get_dashboard(){
-		return view('admin.dashboard');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				return view('admin.dashboard');
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
 	public function get_categories(){
-		$categories = Category::all();
-		return view('admin.cetegory',['categories'=>$categories]);
+
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$categories = Category::all();
+				return view('admin.cetegory',['categories'=>$categories]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
 	public function get_adds(){
-		$adds = Adds::all();
-		return view('admin.adds',['adds'=>$adds]);
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$adds = Adds::all();
+				return view('admin.adds',['adds'=>$adds]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
-	public function get_locations(){
-		$locations = Locations::all();
-		return view('admin.location',['locations'=>$locations]);
+	public function get_cities(){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$cities = City::all();
+				return view('admin.city',['cities'=>$cities]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
-	public function get_add_location(){
-		return view('admin.add_location');
+	public function get_add_city(){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				return view('admin.add_city');
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
 
 
 	public function get_sub_categories(){
-		
-		$sub_categories = DB::table('categories')->select('categories.*','sub_categories.*')
-		->join('sub_categories','categories.category_id','=','sub_categories.category_id')->get();
-		return view('admin.sub_category',['sub_categories'=>$sub_categories]);
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$sub_categories = DB::table('categories')->select('categories.*','sub_categories.*')
+				->join('sub_categories','categories.category_id','=','sub_categories.category_id')->get();
+				return view('admin.sub_category',['sub_categories'=>$sub_categories]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
+
 	}
 
 	public function add_categories(){
-		return view('admin.add_categories');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				return view('admin.add_categories');
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
 	public function add_sub_categories(){
-		$categories = Category::all();
-		return view('admin.add_sub_categories',['categories'=>$categories]);
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$categories = Category::all();
+				return view('admin.add_sub_categories',['categories'=>$categories]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
 	}
 
 	public function add_category(Request $request){
@@ -92,32 +154,63 @@ class AdminController extends Controller
 		}
 	}
 	public function enable_category($id){
-		$category = Category::find($id);
-		$category->is_active = 1;
-		if($category->save()){
-			return redirect('/admin/get_categories')->with('success','Category Enabled Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$category = Category::find($id);
+				$category->is_active = 1;
+				if($category->save()){
+					return redirect('/admin/get_categories')->with('success','Category Enabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 	public function disable_category($id){
-		$category = Category::find($id);
-		$category->is_active = 0;
-		if($category->save()){
-			return redirect('/admin/get_categories')->with('success','Category Disabled Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$category = Category::find($id);
+				$category->is_active = 0;
+				if($category->save()){
+					return redirect('/admin/get_categories')->with('success','Category Disabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 
 	public function get_edit_category($id){
-		$category = Category::find($id);
-		return view('admin.edit_category',['category'=>$category]);
-		
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$category = Category::find($id);
+				return view('admin.edit_category',['category'=>$category]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
+
 	}
 	public function get_edit_sub_category($id){
-		$category = Category::all();
-		$sub_category = SubCategory::find($id);
-		$pageData['category'] = $category;
-		$pageData['sub_category'] = $sub_category;
-		return view('admin.edit_sub_category',$pageData);
-		
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$category = Category::all();
+				$sub_category = SubCategory::find($id);
+				$pageData['category'] = $category;
+				$pageData['sub_category'] = $sub_category;
+				return view('admin.edit_sub_category',$pageData);
+			}
+			else{
+				return redirect('/');
+			}
+		}
+
 	}
 	public function edit_category(Request $request){
 		$data = $request->all();
@@ -134,7 +227,7 @@ class AdminController extends Controller
 
 		if($validator->fails())
 		{
-			
+
 			return redirect('/admin/get_edit_category/'.$request->category_id)
 			->withErrors($validator)
 			->withInput();
@@ -190,11 +283,19 @@ class AdminController extends Controller
 		}
 	}
 	public function delete_category($id){
-		$category = Category::find($id);
-		if($category->delete()){
-			return redirect('/admin/get_categories')->with('success','Category Deleted Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$category = Category::find($id);
+				if($category->delete()){
+					return redirect('/admin/get_categories')->with('success','Category Deleted Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
-		
+
 	}
 
 	public function add_sub_category(Request $request){
@@ -231,130 +332,185 @@ class AdminController extends Controller
 	}
 
 	public function delete_sub_category($id){
-		$sub_category = SubCategory::find($id);
-		if($sub_category->delete()){
-			return redirect('/admin/get_sub_categories')->with('success','Sub Category Deleted Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$sub_category = SubCategory::find($id);
+				if($sub_category->delete()){
+					return redirect('/admin/get_sub_categories')->with('success','Sub Category Deleted Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
-		
+
 	}
-	
-	public function add_location(Request $request){
+
+	public function add_city(Request $request){
 		$data = $request->all();
 		$validator = Validator::make(
 			array(
-				'location_name' =>$request->location_name,
+				'city_name' =>$request->city_name,
 				),
 			array(
-				'location_name' =>'required',
+				'city_name' =>'required',
 				)
 			);
 
 		if($validator->fails())
 		{
-			return redirect('/admin/add_location')
+			return redirect('/admin/add_city')
 			->withErrors($validator)
 			->withInput();
 		}
 
 		else
 		{
-			$location = new Locations();
-			$location->location_name=$request->location_name;
-			$location->is_active= 0;
-			if($location->save()){
-				return redirect('/admin/add_location')->with('success','Added Successfully!');
+			$city = new City();
+			$city->city_name=$request->city_name;
+			$city->is_active= 0;
+			if($city->save()){
+				return redirect('/admin/add_city')->with('success','Added Successfully!');
 			}
 
 		}
 	}
-	public function enable_location($id){
-		$location = Locations::find($id);
-		$location->is_active = 1;
-		if($location->save()){
-			return redirect('/admin/locations')->with('success','Locations Enabled Successfully!');
+	public function enable_city($id){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$city = City::find($id);
+				$city->is_active = 1;
+				if($city->save()){
+					return redirect('/admin/cities')->with('success','City Enabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 
-	public function disable_location($id){
-		$location = Locations::find($id);
-		$location->is_active = 0;
-		if($location->save()){
-			return redirect('/admin/locations')->with('success','Location Disabled Successfully!');
+	public function disable_city($id){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$city = City::find($id);
+				$city->is_active = 0;
+				if($city->save()){
+					return redirect('/admin/cities')->with('success','City Disabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 
-	public function delete_location($id){
-		$location = Locations::find($id);
-		if($location->delete()){
-			return redirect('/admin/locations')->with('success','Location Deleted Successfully!');
+	public function delete_city($id){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$city = City::find($id);
+				if($city->delete()){
+					return redirect('/admin/cities')->with('success','City Deleted Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
-		
 	}
 
 	public function delete_add($id){
-		$add = Adds::find($id);
-		if($add->delete()){
-			return redirect('/admin/get_adds')->with('success','Add Deleted Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$add = Adds::find($id);
+				if($add->delete()){
+					return redirect('/admin/get_adds')->with('success','Add Deleted Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
-		
+
 	}
 
 	public function enable_add($adds_id){
-		
-		$add = Adds::find($adds_id);
-		$add->is_approved = 1;
-		if($add->save()){
-			return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+
+				$add = Adds::find($adds_id);
+				$add->is_approved = 1;
+				if($add->save()){
+					return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 	public function disable_add($id){
-		$add = Adds::find($id);
-		$add->is_approved = 0;
-		if($add->save()){
-			return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$add = Adds::find($id);
+				$add->is_approved = 0;
+				if($add->save()){
+					return redirect('/admin/get_adds')->with('success','Add Enabled Successfully!');
+				}
+			}
+			else{
+				return redirect('/');
+			}
 		}
 	}
 
-	
 
 
-	public function get_edit_location($id){
-		$locations = Locations::find($id);
-		return view('admin.edit_location',['location'=>$locations]);
-		
+
+	public function get_edit_city($id){
+		if(Auth::check()){
+			if(Auth::user()->user_type == 0){
+				$cities = City::find($id);
+				return view('admin.edit_location',['city'=>$cities]);
+			}
+			else{
+				return redirect('/');
+			}
+		}
+
 	}
 
-	public function edit_location(Request $request){
+	public function edit_city(Request $request){
 		$data = $request->all();
 		$validator = Validator::make(
 			array(
-				'location_name' =>$request->location_name,
+				'city_name' =>$request->city_name,
 				),
 			array(
-				'location_name' =>'required',
+				'city_name' =>'required',
 				)
 			);
 
 		if($validator->fails())
 		{
-			
-			return redirect('/admin/get_edit_location/'.$request->location_id)
+
+			return redirect('/admin/get_edit_city/'.$request->city_id)
 			->withErrors($validator)
 			->withInput();
 		}
 
 		else
 		{
-			$location = Locations::find($request->location_id);
-			$location->location_name=$request->location_name;
-			
-			if($location->save()){
-				return redirect('/admin/locations')->with('success','Updated Successfully!');
+			$city = City::find($request->city_id);
+			$city->city_name=$request->city_name;
+
+			if($city->save()){
+				return redirect('/admin/cities')->with('success','Updated Successfully!');
 			}
 
 		}
 	}
 
-	
-	
+
+
 }

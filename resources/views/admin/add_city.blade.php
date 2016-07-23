@@ -1,6 +1,6 @@
 @extends('layouts.admin.adminlayouts')
 
-@section('title', 'Location')
+@section('title', 'City')
 
 @section('page-title')
 
@@ -14,7 +14,7 @@
 
 			<li><a href="{{URL('admin/dashboard')}}">Home</a></li>
 
-			<li class="active">Location</li>
+			<li class="active">City</li>
 
 		</ol>
 
@@ -36,17 +36,17 @@
 		</div>
 		@endif
 		
-		<form action="add_location" method="POST" class="form-horizontal" role="form" >
+		<form action="add_city" method="POST" class="form-horizontal" role="form" >
 			{{csrf_field()}}
 			<div class="col-md-3">
-				<label for="location_name">Location Name</label>
+				<label for="city_name">City Name</label>
 			</div>
 			<div class="col-md-9">
 				<div class="form-group">
-					<input type="text" name="location_name" value="{{Request::old('location_name')}}" id="location_name" class="form-control" >
-					@if($errors->first('location_name')) 
+					<input type="text" name="city_name" value="{{Request::old('city_name')}}" id="city_name" class="form-control" >
+					@if($errors->first('city_name')) 
 					<p class="label label-danger" >
-						{{ $errors->first('location_name') }} 
+						{{ $errors->first('city_name') }} 
 					</p>
 					@endif
 				</div>   

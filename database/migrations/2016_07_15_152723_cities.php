@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Locations extends Migration
+class City extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,9 @@ class Locations extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('location_name');
+            $table->string('city_name');
             $table->integer('is_active');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class Locations extends Migration
      */
     public function down()
     {
-        Schema::drop('locations');
+        Schema::drop('cities');
     }
 }

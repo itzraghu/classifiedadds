@@ -141,7 +141,7 @@
 							<div class="tab-content">
 								<div class="tab-pane active">
 
-									@foreach ($adds as $add)
+									@foreach ($search_results as $search_result)
 									<div class="item-list">
 										<div class="cornerRibbons topAds">
 											<a href="#"> Top Ads</a>
@@ -152,20 +152,20 @@
 
 										<div class="col-sm-7 add-desc-box">
 											<div class="add-details">
-												<h5 class="add-title"> <a href="{{URL('single-adds/'.$add->slug)}}">
-													{{$add->adds_title}} </a> </h5>
-													<span class="info-row"> <span class="add-type business-ads tooltipHere" data-toggle="tooltip" data-placement="right" title="Business Ads">{{$add->adds_type}} </span> <span class="date"><i class=" icon-clock"> </i> 
-{{--*/ $time = strtotime($add->created_at);
+												<h5 class="add-title"> <a href="{{URL('single-adds/'.$search_result->slug)}}">
+													{{$search_result->adds_title}} </a> </h5>
+													<span class="info-row"> <span class="add-type business-ads tooltipHere" data-toggle="tooltip" data-placement="right" title="Business Ads">{{$search_result->adds_type}} </span> <span class="date"><i class=" icon-clock"> </i> 
+{{--*/ $time = strtotime($search_result->created_at);
 
 $newformat = date('d M Y',$time);
 
 $created_at =  $newformat; 
 /*--}}
-{{$created_at}} </span> - <span class="item-location"><i class="fa fa-map-marker"></i> {{$add->city_name}} </span> </span> </div>
+{{$created_at}} </span> - <span class="item-location"><i class="fa fa-map-marker"></i> {{$search_result->city_name}} </span> </span> </div>
 </div>
 
 <div class="col-sm-3 text-right  price-box">
-	<h2 class="item-price"> Rs {{$add->price}} </h2>
+	<h2 class="item-price"> Rs {{$search_result->price}} </h2>
 	<a class="btn btn-danger  btn-sm make-favorite"> <i class="fa fa-certificate"></i> <span>Top Ads</span> </a> <a class="btn btn-default  btn-sm make-favorite"> <i class="fa fa-heart"></i> <span>Save</span> </a> </div>
 
 </div>							
@@ -181,7 +181,7 @@ $created_at =  $newformat;
 	Save Search </a></div>
 </div>
 <div class="pagination-bar text-center">
-	{!! $adds->render() !!}
+	{!! $search_results->render() !!}
 </div>
 
 <div class="post-promo text-center">
@@ -195,4 +195,5 @@ $created_at =  $newformat;
 </div>
 </div>
 </div>
+
 @endsection

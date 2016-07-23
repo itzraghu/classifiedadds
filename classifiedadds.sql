@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2016 at 02:07 AM
+-- Generation Time: Jul 23, 2016 at 01:48 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `adds_info` (
   `adds_id` int(10) UNSIGNED NOT NULL,
   `adds_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `slug` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `adds_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `adds_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -51,10 +52,10 @@ CREATE TABLE `adds_info` (
 -- Dumping data for table `adds_info`
 --
 
-INSERT INTO `adds_info` (`adds_id`, `adds_title`, `adds_description`, `adds_type`, `category_id`, `price`, `seller_name`, `seller_email`, `seller_phone`, `location`, `city`, `premium_type`, `is_payment`, `expiry_date`, `is_approved`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh', 'Private', 4, '12.00', 'Mustak', 'codingbrains11@gmail.com', '1234567890', '1', '2', '', '0', '0000-00-00 00:00:00', '0', 2, '2016-07-13 17:10:28', '2016-07-13 17:10:28'),
-(2, 'asdfasdffghg', 'cvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgdcvasdrgd', 'Private', 5, '12.00', 'Mustak', 'codingbrains11@gmail.com', '1234567890', '2', '2', '', '0', '0000-00-00 00:00:00', '0', 2, '2016-07-14 09:55:48', '2016-07-14 09:55:48'),
-(3, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Private', 6, '123.00', 'Mustak', 'codingbrains11@gmail.com', '1234567890', '1', '1', '', '0', '0000-00-00 00:00:00', '0', 2, '2016-07-14 09:57:04', '2016-07-14 09:57:04');
+INSERT INTO `adds_info` (`adds_id`, `adds_title`, `slug`, `adds_description`, `adds_type`, `category_id`, `price`, `seller_name`, `seller_email`, `seller_phone`, `location`, `city`, `premium_type`, `is_payment`, `expiry_date`, `is_approved`, `user_id`, `created_at`, `updated_at`) VALUES
+(26, 'Samsung 7262 ', 'Samsung-7262-993', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'Private', 6, '999.99', 'Raghvendra Pratap Singh', 'codingbrains2@gmail.com', '8574555158', '1', '1', '', '0', '0000-00-00 00:00:00', '1', 0, '2016-07-20 15:32:33', '2016-07-20 15:32:33'),
+(27, 'Honda city', 'Honda-city138', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has su', 'Private', 4, '999.99', 'Shubhanshu jaiswal', 'shubhanshu@gmail.com', '7894561230', '1', '1', '', '0', '0000-00-00 00:00:00', '1', 0, '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(28, 'Test1', 'Test1658', 'dvdf v r', 'Private', 4, '12.00', 'Mustak', 'codingbrains11@gmail.com', '1234567890', 'tesdfgbdf', '3', '', '0', '0000-00-00 00:00:00', '1', 3, '2016-07-22 13:51:28', '2016-07-22 13:51:28');
 
 -- --------------------------------------------------------
 
@@ -94,6 +95,29 @@ INSERT INTO `categories` (`category_id`, `category_name`, `category_icon`, `is_a
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cities`
+--
+
+CREATE TABLE `cities` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `city_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `city_name`, `is_active`, `created_at`, `updated_at`) VALUES
+(3, 'Test 1', 1, '2016-07-22 13:44:30', '2016-07-22 13:44:47'),
+(4, 'Test 2', 1, '2016-07-22 13:44:35', '2016-07-22 13:44:49'),
+(5, 'Test 3', 1, '2016-07-22 13:44:43', '2016-07-22 13:44:50');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `city_list`
 --
 
@@ -108,23 +132,33 @@ CREATE TABLE `city_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `locations`
+-- Table structure for table `images`
 --
 
-CREATE TABLE `locations` (
+CREATE TABLE `images` (
   `id` int(10) UNSIGNED NOT NULL,
-  `location_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `is_active` int(11) NOT NULL,
+  `adds_id` int(11) NOT NULL,
+  `img_type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `img_path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `locations`
+-- Dumping data for table `images`
 --
 
-INSERT INTO `locations` (`id`, `location_name`, `is_active`, `created_at`, `updated_at`) VALUES
-(2, 'Test2', 1, '2016-07-15 10:18:20', '2016-07-15 10:43:47');
+INSERT INTO `images` (`id`, `adds_id`, `img_type`, `img_path`, `created_at`, `updated_at`) VALUES
+(4, 26, '0', 'images/adds/1.png1469048553.png', '2016-07-20 15:32:33', '2016-07-20 15:32:33'),
+(5, 26, '0', 'images/adds/2.jpg1469048553.jpg', '2016-07-20 15:32:33', '2016-07-20 15:32:33'),
+(6, 26, '0', 'images/adds/3.jpg1469048553.jpg', '2016-07-20 15:32:33', '2016-07-20 15:32:33'),
+(7, 26, '0', 'images/adds/4.jpg1469048553.jpg', '2016-07-20 15:32:33', '2016-07-20 15:32:33'),
+(8, 27, '0', 'images/adds/camera.jpg1469049986.jpg', '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(9, 27, '0', 'images/adds/car.jpg1469049986.jpg', '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(10, 27, '0', 'images/adds/catalog.jpg1469049986.jpg', '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(11, 27, '0', 'images/adds/hdd.jpg1469049986.jpg', '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(12, 27, '0', 'images/adds/house.jpg1469049986.jpg', '2016-07-20 15:56:26', '2016-07-20 15:56:26'),
+(13, 28, '', 'images/adds/1.jpg1469215288.jpg', '2016-07-22 13:51:28', '2016-07-22 13:51:28');
 
 -- --------------------------------------------------------
 
@@ -168,7 +202,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2016_07_06_135114_create_state_list_table', 1),
 ('2016_07_12_224056_categories', 2),
 ('2016_07_13_163137_sub_categories', 3),
-('2016_07_15_152723_locations', 4);
+('2016_07_15_152723_locations', 4),
+('2016_07_20_152209_create_images_table', 5);
 
 -- --------------------------------------------------------
 
@@ -288,8 +323,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `gender`, `mobile_no`, `about_me`, `address`, `city`, `state`, `zip_code`, `is_email_verify`, `is_mobile_verify`, `account_type`, `user_type`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Mustak', 'khan', 'codingbrains1@gmail.com', '$2y$10$TFd6Raq0Ct9/za3vltROfOrM1SkffhZBv0F6IvBktuGlt8/tUxxoW', 'Male', '1234567890', '', 'LUCKNOW', '', '', '226016', '1', '0', '', '2', '0', '2avfLX0wW1gqmhZIrZyRkQMfaccpcxhdhsAwtDt31EMafgWc5in69fQVaSGO', '2016-07-11 14:46:49', '2016-07-18 12:22:08'),
-(3, 'Raghvendra Pratap', 'singh', 'admin@classified.com', '$2y$10$KZ4mcXdEaQOTowSd69.4q.UXmlybkoD2HPEXNMb/B5e9b.BvpqNOq', 'Male', '1234567890', '', '', '', '', '', '1', '0', '', '0', '0', 'YvFJrwwlTcUGP7hU5U5Pewk0j0JlNxCyjHGtymO99Zgs6MqzxgknWSumTKZF', '2016-07-12 10:02:40', '2016-07-15 10:44:08');
+(2, 'Mustak', 'khan', 'codingbrains1@gmail.com', '$2y$10$TFd6Raq0Ct9/za3vltROfOrM1SkffhZBv0F6IvBktuGlt8/tUxxoW', 'Male', '1234567890', '', 'LUCKNOW', '', '', '226016', '1', '0', '', '2', '0', 'lqn6kF3qGsnzguXzidOj3THi45GigpZnZASsz3NPOZEGvHcvDtOgAgfDDeLN', '2016-07-11 14:46:49', '2016-07-22 10:25:13'),
+(3, 'Raghvendra Pratap', 'singh', 'admin@classified.com', '$2y$10$KZ4mcXdEaQOTowSd69.4q.UXmlybkoD2HPEXNMb/B5e9b.BvpqNOq', 'Male', '1234567890', '', '', '', '', '', '1', '0', '', '0', '0', '9aV3BIiKw2NMOkVFq5uTHMmidOxOK1bpMrE7CMZRGlwvVvqPmQOlR4IRe21p', '2016-07-12 10:02:40', '2016-07-22 13:58:48');
 
 --
 -- Indexes for dumped tables
@@ -308,15 +343,21 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`category_id`);
 
 --
+-- Indexes for table `cities`
+--
+ALTER TABLE `cities`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `city_list`
 --
 ALTER TABLE `city_list`
   ADD PRIMARY KEY (`city_id`);
 
 --
--- Indexes for table `locations`
+-- Indexes for table `images`
 --
-ALTER TABLE `locations`
+ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -371,22 +412,27 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `adds_info`
 --
 ALTER TABLE `adds_info`
-  MODIFY `adds_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `adds_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `cities`
+--
+ALTER TABLE `cities`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `city_list`
 --
 ALTER TABLE `city_list`
   MODIFY `city_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `locations`
+-- AUTO_INCREMENT for table `images`
 --
-ALTER TABLE `locations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `images`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `main_category`
 --

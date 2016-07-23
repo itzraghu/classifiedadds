@@ -1,6 +1,6 @@
 @extends('layouts.admin.adminlayouts')
 
-@section('title', 'Locations')
+@section('title', 'Edit City')
 
 @section('page-title')
 
@@ -14,7 +14,7 @@
 
 			<li><a href="{{URL('admin/dashboard')}}">Home</a></li>
 
-			<li class="active">Locations</li>
+			<li class="active">Edit City</li>
 
 		</ol>
 
@@ -36,18 +36,18 @@
 		</div>
 		@endif
 		
-		<form action="/admin/edit_location" method="POST" class="form-horizontal" role="form">
+		<form action="/admin/edit_city" method="POST" class="form-horizontal" role="form">
 			{{csrf_field()}}
-			<input type="hidden" name ="location_id" value="{{$location->id}}">
+			<input type="hidden" name ="city_id" value="{{$city->id}}">
 			<div class="col-md-3">
-				<label for="location_name">Location Name</label>
+				<label for="city_name">City Name</label>
 			</div>
 			<div class="col-md-9">
 				<div class="form-group">
-					<input type="text" name="location_name" value="{{$location->location_name}}" id="location_name" class="form-control" >
-					@if($errors->first('location_name')) 
+					<input type="text" name="city_name" value="{{$city->city_name}}" id="city_name" class="form-control" >
+					@if($errors->first('city_name')) 
 					<p class="label label-danger" >
-						{{ $errors->first('location_name') }} 
+						{{ $errors->first('city_name') }} 
 					</p>
 					@endif
 				</div>   
@@ -55,7 +55,7 @@
 			
 			<div class="form-group">
 				<div class="col-sm-9 col-sm-offset-3">
-					<button type="submit" class="btn btn-primary">Submit</button> <a href="{{URL('admin/locations')}}" class="btn btn-primary">Back</a>
+					<button type="submit" class="btn btn-primary">Submit</button> <a href="{{URL('admin/city')}}" class="btn btn-primary">Back</a>
 				</div>
 
 

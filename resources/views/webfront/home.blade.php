@@ -8,7 +8,7 @@
 			<div class="row row-featured row-featured-category">
 				<div class="col-lg-12  box-title no-border">
 					<div class="inner"><h2><span>Browse by</span>
-						Category <a href="/category"  class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
+						Category <a href="javascript:void(0)"  class="sell-your-item"> View more <i class="  icon-th-list"></i> </a></h2>
 					</div>
 				</div>
 				@foreach ($categories as $category)
@@ -381,27 +381,19 @@
 					<h2 class="title-2">Popular Categories </h2>
 					<div class="inner-box-content">
 						<ul class="cat-list arrow">
-							<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Apparel (1,386) </a></li>
-							<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Art (1,163) </a></li>
-							<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Business Opportunities (4,974) </a>
-							</li>
-							<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Community and Events (1,258) </a></li>
-							<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Electronics and Appliances
-								(1,578) </a></li>
-								<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Jobs and Employment (3,609) </a></li>
-								<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Motorcycles (968) </a></li>
-								<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Pets (1,188) </a></li>
-								<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Services (7,583) </a></li>
-								<li><a href="http://templatecycle.com/demo/bootclassified-v1.4/dist/sub-category-sub-location.html"> Vehicles (1,129) </a></li>
-							</ul>
-						</div>
+							@foreach ($categories as $category)
+							<li><a href="{{URL('category/'.$category->category_name)}}"> {{$category->category_name}} </a></li>
+							@endforeach
+							
+						</ul>
 					</div>
-					<div class="inner-box no-padding"><img class="img-responsive" src="images/add2.jpg" alt="">
-					</div>
-				</aside>
-			</div>
+				</div>
+				<div class="inner-box no-padding"><img class="img-responsive" src="images/add2.jpg" alt="">
+				</div>
+			</aside>
 		</div>
 	</div>
+</div>
 </div>
 
 @include('common.webfront.footer-top')

@@ -240,13 +240,8 @@
                           <div class="form-group">
                             <label class="col-md-3 control-label" for="location">Location</label>
                             <div class="col-md-8">
-                              <select name="location" id="location" class="form-control">
-                                <option value="" selected="selected"> Select a Location...</option>
-                                @foreach ($locations as $location)
-                                <option value="{{$location->id}}">{{$location->location_name}}</option>
-                                @endforeach
-
-                              </select>
+                              <input id="location" name="location" value="{{Request::old('location')}}" placeholder="Enter Location" class="form-control input-md"  type="text">
+                              
                               @if($errors->first('location')) 
                               <p class="label label-danger" >
                                 {{ $errors->first('location') }} 
@@ -261,8 +256,9 @@
                             <div class="col-md-8">
                               <select id="city" name="city" class="form-control">
                                 <option value="">Select City</option>
-                                <option value="1">Option one</option>
-                                <option value="2">Option two</option>
+                                @foreach ($cities as $city)
+                                <option value="{{$city->id}}">{{$city->city_name}}</option>
+                                @endforeach
                               </select>
                               @if($errors->first('city')) 
                               <p class="label label-danger" >

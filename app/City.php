@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Locations extends Model
+class City extends Model
 {
-	protected $table = "locations";
+	protected $table = "cities";
 	protected $primaryKey = 'id';
 }

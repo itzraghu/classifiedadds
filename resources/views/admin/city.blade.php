@@ -1,6 +1,6 @@
 @extends('layouts.admin.adminlayouts')
 
-@section('title', 'Category')
+@section('title', 'City')
 
 @section('page-title')
 
@@ -14,7 +14,7 @@
 
 			<li><a href="{{URL('admin/dashboard')}}">Home</a></li>
 
-			<li class="active">Location</li>
+			<li class="active">City</li>
 
 		</ol>
 
@@ -40,26 +40,26 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Location Id</th>
-							<th>Location Name</th>
+							<th>City Id</th>
+							<th>City Name</th>
 							<th>Show/Hide</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						
-						@foreach ($locations as $location)
+						@foreach ($cities as $city)
 						<tr>
-							<td>{{ $location->id}}</td>
-							<td>{{ $location->location_name}}</td>
+							<td>{{ $city->id}}</td>
+							<td>{{ $city->city_name}}</td>
 							<td>
-								@if ($location->is_active == "0")
-								<a href="{{URL('admin/enable_location/'.$location->id)}}">Enable</a> 
+								@if ($city->is_active == "0")
+								<a href="{{URL('admin/enable_city/'.$city->id)}}">Enable</a> 
 								@else
-								<a href="{{URL('admin/disable_location/'.$location->id)}}">Disable</a>
+								<a href="{{URL('admin/disable_city/'.$city->id)}}">Disable</a>
 								@endif
 							</td>
-							<td><a href="{{URL('admin/get_edit_location/'.$location->id)}}">Edit</a> / <a href="{{URL('admin/delete_location/'.$location->id)}}">Delete</a></td>
+							<td><a href="{{URL('admin/get_edit_city/'.$city->id)}}">Edit</a> / <a href="{{URL('admin/delete_city/'.$city->id)}}">Delete</a></td>
 						</tr>
 						@endforeach 
 					</tbody>

@@ -176,9 +176,9 @@
 
                         <li class="{{isActiveRoute('admin/add_sub_category')}}"><a href="{{URL('admin/add_sub_category')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Add Sub Category</p></a></li>
 
-                        <li class="{{isActiveRoute('admin/locations')}}"><a href="{{URL('admin/locations')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Locations</p></a></li>
+                        <li class="{{isActiveRoute('admin/cities')}}"><a href="{{URL('admin/cities')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Cities</p></a></li>
 
-                        <li class="{{isActiveRoute('admin/add_location')}}"><a href="{{URL('admin/add_location')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Add Locations</p></a></li>
+                        <li class="{{isActiveRoute('admin/add_city')}}"><a href="{{URL('admin/add_city')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Add City</p></a></li>
 
                         <li class="{{isActiveRoute('admin/get_adds')}}"><a href="{{URL('admin/get_adds')}}" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Adds</p></a></li>
 
@@ -377,6 +377,7 @@
         {{ Html::script('admin/assets/js/modern.js')}}
 
         {{ Html::script('admin/assets/js/pages/dashboard.js')}}
+        
 
 
     </body>

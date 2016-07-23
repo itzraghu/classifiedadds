@@ -24,7 +24,7 @@ $newformat = date('d M Y',$time);
 
 $joined =  $newformat; 
 /*--}}
-<span class="info-row"> <span class="date"><i class=" icon-clock"> </i> {{ $joined }} </span> - <span class="category">{{ $adds->category_name }} </span>- <span class="item-location"><i class="fa fa-map-marker"></i> {{ $adds->location_name }}</span> </span>
+<span class="info-row"> <span class="date"><i class=" icon-clock"> </i> {{ $joined }} </span> - <span class="category">{{ $adds->category_name }} </span>- <span class="item-location"><i class="fa fa-map-marker"></i> {{ $adds->city_name }}</span> </span>
 <div class="ads-image">
 	<h1 class="pricetag"> Rs{{ $adds->price }}</h1>
 	<div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 402px;"><ul class="bxslider" style="width: 515%; position: relative; transition-duration: 0s; transform: translate3d(-713px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 713px;" class="bx-clone"><img src="images/item/tp-big/Image00013.jpg" alt="img"></li>
@@ -68,7 +68,7 @@ $joined =  $newformat;
 						<p class="no-margin"><strong>Type:</strong> {{ $adds->adds_type }}</p>
 					</li>
 					<li>
-						<p class="no-margin"><strong>Location:</strong> {{ $adds->location_name }} </p>
+						<p class="no-margin"><strong>Location:</strong> {{ $adds->city_name }} </p>
 					</li>
 								{{-- <li>
 									<p class=" no-margin "><strong>Condition:</strong> New</p>
@@ -102,7 +102,7 @@ $joined =  $newformat;
 					<div class="panel-body text-center">
 						<div class="seller-info">
 							<h3 class="no-margin">{{ $adds->seller_name }}</h3>
-							<p>Location: <strong>{{ $adds->location_name }}</strong></p>
+							<p>Location: <strong>{{ $adds->city_name }}</strong></p>
 							
 							<p> Joined: <strong>{{ $joined }}</strong></p>
 						</div>

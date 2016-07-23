@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Category;
 use App\SubCategory;
-use App\Locations;
+use App\City;
 use App\Adds;
 use App\Image;
 use App\Http\Controllers\Controller;
@@ -34,17 +34,41 @@ class WebfrontController extends Controller
 	public function gethome(){
 
 		$categories = Category::where('is_active','=','1')->get();
-		$locations = Locations::where('is_active','=','1')->get();
+		$cities = City::where('is_active','=','1')->get();
 		$pageData['categories'] = $categories;
+		$pageData['cities'] = $cities;
 		return view('webfront.home',$pageData);
+
+	}
+
+	public function search_result(Request $request)
+	{
+
+		$city =  $request->city ;
+		$adds_title =  $request->ads ;
+
+		$search_result = Adds::where('adds_title', 'LIKE', '%'.$adds_title.'%')
+		->orwhere('city', 'LIKE', '%'.$city.'%')
+		->where('is_approved', '=', '1')->paginate(15);
+
+		$all_category = Category::where('is_active','=','1')->get();
+		$all_cities = City::where('is_active','=','1')->get();
+
+		$pageData['all_category'] = $all_category;
+		$pageData['all_cities'] = $all_cities;
+		$pageData['search_results'] = $search_result;
+
+		return view('webfront.search',$pageData);
 
 	}
 
 	public function get_login(){
 
 		return view('webfront.login');
+		
 	}
 	public function login(Request $request){
+
 		$validator = Validator::make(
 			array(
 				'email' =>$request->email,
@@ -160,16 +184,16 @@ class WebfrontController extends Controller
 	}
 
 	public function get_adds_form(){
-		if(Auth::check()){
-			$categories = Category::where('is_active','=','1')->get();
-			$locations = Locations::where('is_active','=','1')->get();
-			$pageData['categories'] = $categories;
-			$pageData['locations'] = $locations;
-			return view('webfront.adds-form',$pageData);
-		}
-		else{
-			return redirect('login');
-		}
+		// if(Auth::check()){
+		$categories = Category::where('is_active','=','1')->get();
+		$cities = City::where('is_active','=','1')->get();
+		$pageData['categories'] = $categories;
+		$pageData['cities'] = $cities;
+		return view('webfront.adds-form',$pageData);
+		// }
+		// else{
+		// 	return redirect('login');
+		// }
 
 	}
 	public function save_add(Request $request){
@@ -251,19 +275,19 @@ class WebfrontController extends Controller
 
 	public function get_category($category){
 		$all_category = Category::where('is_active','=','1')->get();
-		$all_locations = Locations::where('is_active','=','1')->get();
+		$all_cities = City::where('is_active','=','1')->get();
 		$categories = Category::where('category_name','=',$category)->first();
 		$sub_categories = SubCategory::where('category_id','=',$categories->category_id)->get();
 
 
 		$adds = DB::table('adds_info')->where('adds_info.is_approved', '=', 1)
 		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
-		->leftJoin('locations', 'adds_info.location', '=', 'locations.id')
+		->leftJoin('cities', 'adds_info.city', '=', 'cities.id')
 		->where('categories.category_id', '=', $categories->category_id)
 
 		->paginate(15);
 		$pageData['all_category'] = $all_category; 
-		$pageData['all_locations'] = $all_locations; 
+		$pageData['all_cities'] = $all_cities; 
 		$pageData['categories'] = $categories; 
 		$pageData['sub_categories'] = $sub_categories; 
 		$pageData['adds'] = $adds; 
@@ -275,7 +299,7 @@ class WebfrontController extends Controller
 		$id = DB::table('adds_info')->where('adds_info.slug', '=', $slug)->first();
 		$adds = DB::table('adds_info')->where('adds_info.adds_id', '=', $id->adds_id)
 		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
-		->leftJoin('locations', 'adds_info.location', '=', 'locations.id')
+		->leftJoin('cities', 'adds_info.city', '=', 'cities.id')
 		->first();
 
 		$images = DB::table('images')->where('images.adds_id', '=', $id->adds_id)->get();

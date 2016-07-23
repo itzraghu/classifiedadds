@@ -20,6 +20,7 @@
 
 
 {!! Html::style("css/owl.theme.css") !!}
+{!! Html::style("css/sweetalert.css") !!}
 
 
 <!--[if lt IE 9]>
@@ -78,6 +79,29 @@
 	{!! Html::script("js/jquery.autocomplete.js") !!}
 	{!! Html::script("js/usastates.js") !!}
 	{!! Html::script("js/autocomplete-demo.js") !!}
+	{!! Html::script("js/sweetalert.min.js") !!}
+	<script>
+		$(document).ready(function() {
+			$( "#searchBtn" ).click(function(event) {
+				var city = $("#city option:selected").val();
+				var ads = $("#ads").val();
+
+				if(city =="" || ads == ""){
+					if(city == ""){
+						swal(" Website Says", "Please select city!", "error");
+						$("#city").focus();
+						return false;
+					}
+					else {
+						swal(" Website Says", "What are you Looking for ?", "error");
+						$("#ads").focus();
+						return false;
+					}
+				}
+				
+			});
+		});
+	</script>
 
 
 	<div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
