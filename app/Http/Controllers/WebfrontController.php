@@ -33,10 +33,22 @@ class WebfrontController extends Controller
 
 	public function gethome(){
 
+		$all_cat = array();
 		$categories = Category::where('is_active','=','1')->get();
+		foreach ($categories as $key => $value) {
+
+			$all_cat[$key]['main_cat_name'] = $value->category_name;
+			$all_cat[$key]['sub_cat_name'] = DB::table('sub_categories')
+			->where('category_id',$value->category_id)->get();
+
+		}
+		
 		$cities = City::where('is_active','=','1')->get();
+
 		$pageData['categories'] = $categories;
 		$pageData['cities'] = $cities;
+		$pageData['all_cat'] = $all_cat;
+		// dd($adds);
 		return view('webfront.home',$pageData);
 
 	}
@@ -252,9 +264,17 @@ class WebfrontController extends Controller
 			if ($request->file('file4')) { $files[] = $request->file('file4'); }
 			if ($request->file('file5')) { $files[] = $request->file('file5'); }
 			if(count($files)>0){
+				$i = 0;
 				foreach ($files as $file)
 				{
+
 					$img = new Image();
+					if($i == 0){
+						$img->img_type = 1;
+					}
+					else{
+						$img->img_type = 0;
+					}
 					$filename = str_replace(' ', '', $file->getClientOriginalName());
 					$extension = $file->getClientOriginalExtension();
 					$path = 'images/adds/'.$filename.date('U').'.'.$extension;
@@ -282,10 +302,12 @@ class WebfrontController extends Controller
 
 		$adds = DB::table('adds_info')->where('adds_info.is_approved', '=', 1)
 		->join('categories', 'adds_info.category_id', '=', 'categories.category_id')
+		->join('images', 'images.adds_id', '=', 'adds_info.adds_id')
+		->where('images.img_type', '=', 1)
 		->leftJoin('cities', 'adds_info.city', '=', 'cities.id')
 		->where('categories.category_id', '=', $categories->category_id)
-
 		->paginate(15);
+		// dd($adds);
 		$pageData['all_category'] = $all_category; 
 		$pageData['all_cities'] = $all_cities; 
 		$pageData['categories'] = $categories; 
