@@ -30,6 +30,8 @@ Route::get('/contact-us','WebfrontController@get_contact_us');
 Route::get('/faq','WebfrontController@get_faq');
 
 Route::get('search','WebfrontController@search_result');
+Route::get('/ajax_subcat/{cat_id}','WebfrontController@subcat_list');
+
 
 /*-------- User acoount ---------*/
 Route::get('/MyAccount','UserController@get_my_account');
@@ -45,7 +47,7 @@ Route::group(['middleware'=>'auth'],function()
 
 /* ---------  Admin Routs ---------------*/
 
-Route::group(['prefix' => 'admin','middleware'=>'auth'], function () { 
+Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
 	// Route::auth();
 	Route::get('dashboard', 'AdminController@get_dashboard');
 	// Route::get('category', 'AdminController@get_category');
@@ -59,7 +61,7 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
 
 	Route::get('add_sub_category', 'AdminController@add_sub_categories');
 	Route::post('add_sub_category', 'AdminController@add_sub_category');
-	
+
 	Route::get('enable_category/{id}', 'AdminController@enable_category');
 	Route::get('disable_category/{id}', 'AdminController@disable_category');
 

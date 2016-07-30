@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Auth;
+use Response;
 use DB;
 use Session;
 use Validator;
@@ -31,6 +32,11 @@ class WebfrontController extends Controller
 		$this->user = Auth::user();
 	}
 
+	public function subcat_list($cat_id)
+	{
+		$sub_cat = SubCategory::where('category_id','=',$cat_id)->get();
+		return Response::json($sub_cat);
+	}
 	public function gethome(){
 
 		$all_cat = array();
@@ -42,13 +48,13 @@ class WebfrontController extends Controller
 			->where('category_id',$value->category_id)->get();
 
 		}
-		
+
 		$cities = City::where('is_active','=','1')->get();
 
 		$pageData['categories'] = $categories;
 		$pageData['cities'] = $cities;
 		$pageData['all_cat'] = $all_cat;
-		// dd($adds);
+		// dd($all_cat);
 		return view('webfront.home',$pageData);
 
 	}
@@ -77,7 +83,7 @@ class WebfrontController extends Controller
 	public function get_login(){
 
 		return view('webfront.login');
-		
+
 	}
 	public function login(Request $request){
 
@@ -111,7 +117,7 @@ class WebfrontController extends Controller
 			else{
 				$user = array('email' =>$email,'password' =>$password);
 				if(Auth::attempt($user)){
-					
+
 					if(Auth::user()->user_type=='2'){
 						Session::put('name',Auth::user()->first_name." ". Auth::user()->last_name);;
 						Session::put('email',Auth::user()->email);;
@@ -215,6 +221,7 @@ class WebfrontController extends Controller
 			array(
 
 				'category_id' =>'required',
+				'sub_category_id' =>'required',
 				'adds_title' =>'required',
 				'adds_description' =>'required',
 				'price' =>'required',
@@ -239,11 +246,12 @@ class WebfrontController extends Controller
 
 			$adds = new Adds();
 			$adds->category_id=$request->category_id;
+			$adds->sub_category_id=$request->sub_category_id;
 			$adds->adds_type=$request->adds_type;
 			$adds->adds_title=$request->adds_title;
 			$adds->slug=str_replace(" ","-",$request->adds_title).rand(0,1000);
 			$adds->adds_description=$request->adds_description;
-			$adds->adds_description=$request->adds_description;
+			// $adds->adds_description=$request->adds_description;
 			$adds->price=$request->price;
 			$adds->seller_name=$request->seller_name;
 			$adds->seller_email=$request->seller_email;
@@ -308,12 +316,12 @@ class WebfrontController extends Controller
 		->where('categories.category_id', '=', $categories->category_id)
 		->paginate(15);
 		// dd($adds);
-		$pageData['all_category'] = $all_category; 
-		$pageData['all_cities'] = $all_cities; 
-		$pageData['categories'] = $categories; 
-		$pageData['sub_categories'] = $sub_categories; 
-		$pageData['adds'] = $adds; 
-		return view('webfront.category',$pageData);		
+		$pageData['all_category'] = $all_category;
+		$pageData['all_cities'] = $all_cities;
+		$pageData['categories'] = $categories;
+		$pageData['sub_categories'] = $sub_categories;
+		$pageData['adds'] = $adds;
+		return view('webfront.category',$pageData);
 	}
 
 	public function get_single_adds($slug){

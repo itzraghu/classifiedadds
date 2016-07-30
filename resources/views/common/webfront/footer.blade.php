@@ -7,5 +7,6 @@
 			<ul class=" pull-right navbar-link footer-nav">
 				<li> © 2016 Ronyinfotech Pvt Ltd.</li>
 			</ul>
+		</div>
+
 	</div>
-</div>

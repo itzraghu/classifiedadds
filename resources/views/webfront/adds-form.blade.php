@@ -28,11 +28,25 @@
                           @foreach ($categories as $category)
                           <option value="{{$category->category_id}}">{{$category->category_name}}</option>
                           @endforeach
-                          
+
                         </select>
-                        @if($errors->first('category_id')) 
+                        @if($errors->first('category_id'))
                         <p class="label label-danger" >
-                          {{ $errors->first('category_id') }} 
+                          {{ $errors->first('category_id') }}
+
+                        </p>
+                        @endif
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="sub_category_id">Subcategory</label>
+                      <div class="col-md-8">
+                        <select name="sub_category_id" id="sub_category_id" class="form-control">
+                        </select>
+                        @if($errors->first('sub_category_id'))
+                        <p class="label label-danger" >
+                          {{ $errors->first('sub_category_id') }}
 
                         </p>
                         @endif
@@ -55,9 +69,9 @@
                           <label class="col-md-3 control-label" for="adds_title">Ad title</label>
                           <div class="col-md-8">
                             <input id="adds_title" name="adds_title" value="{{Request::old('adds_title')}}" placeholder="Ad title" class="form-control input-md"  type="text">
-                            @if($errors->first('adds_title')) 
+                            @if($errors->first('adds_title'))
                             <p class="label label-danger" >
-                              {{ $errors->first('adds_title') }} 
+                              {{ $errors->first('adds_title') }}
                             </p>
                             @endif
                             <span class="help-block">A great title needs at least 60 characters. </span>
@@ -68,9 +82,9 @@
                           <label class="col-md-3 control-label" for="adds_description">Describe ad </label>
                           <div class="col-md-8">
                             <textarea class="form-control" id="adds_description" value="{{Request::old('adds_description')}}" name="adds_description"></textarea>
-                            @if($errors->first('adds_description')) 
+                            @if($errors->first('adds_description'))
                             <p class="label label-danger" >
-                              {{ $errors->first('adds_description') }} 
+                              {{ $errors->first('adds_description') }}
 
                             </p>
                             @endif
@@ -82,9 +96,9 @@
                           <div class="col-md-4">
                             <div class="input-group"><span class="input-group-addon">Rs</span>
                               <input id="price" name="price" value="{{Request::old('price')}}" class="form-control" placeholder="placeholder"  type="text">
-                              @if($errors->first('price')) 
+                              @if($errors->first('price'))
                               <p class="label label-danger" >
-                                {{ $errors->first('price') }} 
+                                {{ $errors->first('price') }}
 
                               </p>
                               @endif
@@ -103,19 +117,19 @@
                             <label class="col-md-3 control-label" for="textarea"> Picture </label>
                             <div class="col-md-8">
                               <div class="mb10">
-                                <input id="input-upload-img1" name="file1" type="file" class="file" data-preview-file-type="text"> 
+                                <input id="input-upload-img1" name="file1" type="file" class="file" data-preview-file-type="text">
                               </div>
                               <div class="mb10">
-                                <input id="input-upload-img1" name="file2" type="file" class="file" data-preview-file-type="text"> 
+                                <input id="input-upload-img1" name="file2" type="file" class="file" data-preview-file-type="text">
                               </div>
                               <div class="mb10">
-                                <input id="input-upload-img1" name="file3" type="file" class="file" data-preview-file-type="text"> 
+                                <input id="input-upload-img1" name="file3" type="file" class="file" data-preview-file-type="text">
                               </div>
                               <div class="mb10">
-                               <input id="input-upload-img1" name="file4" type="file" class="file" data-preview-file-type="text"> 
+                               <input id="input-upload-img1" name="file4" type="file" class="file" data-preview-file-type="text">
                              </div>
                              <div class="mb10">
-                               <input id="input-upload-img1" name="file5" type="file" class="file" data-preview-file-type="text"> 
+                               <input id="input-upload-img1" name="file5" type="file" class="file" data-preview-file-type="text">
                              </div>
 
                              <!--   <div class="mb10">
@@ -197,9 +211,9 @@
                         <label class="col-md-3 control-label" for="seller_name">Name</label>
                         <div class="col-md-8">
                           <input id="seller_name" name="seller_name" value="{{Request::old('seller_name')}}" placeholder="Seller Name" class="form-control input-md"  type="text">
-                          @if($errors->first('seller_name')) 
+                          @if($errors->first('seller_name'))
                           <p class="label label-danger" >
-                            {{ $errors->first('seller_name') }} 
+                            {{ $errors->first('seller_name') }}
                           </p>
                           @endif
                         </div>
@@ -210,9 +224,9 @@
                           Email</label>
                           <div class="col-md-8">
                             <input id="seller_email" name="seller_email" value="{{Request::old('seller_email')}}" class="form-control" placeholder="Email"  type="text">
-                            @if($errors->first('seller_email')) 
+                            @if($errors->first('seller_email'))
                             <p class="label label-danger" >
-                              {{ $errors->first('seller_email') }} 
+                              {{ $errors->first('seller_email') }}
                             </p>
                             @endif
                             <div class="checkbox">
@@ -229,9 +243,9 @@
                             Number</label>
                             <div class="col-md-8">
                               <input id="seller_phone" name="seller_phone" value="{{Request::old('seller_phone')}}" placeholder="Phone Number" class="form-control input-md"  type="text">
-                              @if($errors->first('seller_number')) 
+                              @if($errors->first('seller_number'))
                               <p class="label label-danger" >
-                                {{ $errors->first('seller_number') }} 
+                                {{ $errors->first('seller_number') }}
                               </p>
                               @endif
                             </div>
@@ -241,10 +255,10 @@
                             <label class="col-md-3 control-label" for="location">Location</label>
                             <div class="col-md-8">
                               <input id="location" name="location" value="{{Request::old('location')}}" placeholder="Enter Location" class="form-control input-md"  type="text">
-                              
-                              @if($errors->first('location')) 
+
+                              @if($errors->first('location'))
                               <p class="label label-danger" >
-                                {{ $errors->first('location') }} 
+                                {{ $errors->first('location') }}
 
                               </p>
                               @endif
@@ -260,15 +274,15 @@
                                 <option value="{{$city->id}}">{{$city->city_name}}</option>
                                 @endforeach
                               </select>
-                              @if($errors->first('city')) 
+                              @if($errors->first('city'))
                               <p class="label label-danger" >
-                                {{ $errors->first('city') }} 
+                                {{ $errors->first('city') }}
 
                               </p>
                               @endif
                             </div>
                           </div>
-                  {{-- 
+                  {{--
         <div class="well">
                             <h3><i class=" icon-certificate icon-color-1"></i> Make your Ad Premium
                             </h3>
@@ -344,9 +358,9 @@
                                       <label class="checkbox-inline" for="checkboxes-0">
                                         <input name="Terms" id="checkboxes-0" value="1" type="checkbox">
                                         Remember above contact information. </label><br>
-                                        @if($errors->first('Terms')) 
+                                        @if($errors->first('Terms'))
                                         <p class="label label-danger" >
-                                          {{ $errors->first('Terms') }} 
+                                          {{ $errors->first('Terms') }}
 
                                         </p>
                                         @endif
@@ -397,5 +411,4 @@
 
                       </div>
 
-                      @endsection                }
-                    }
+                      @endsection

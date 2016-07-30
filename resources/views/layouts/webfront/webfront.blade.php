@@ -75,10 +75,10 @@
 
 	</script>
 
-	{!! Html::script("js/jquery.mockjax.js") !!}
-	{!! Html::script("js/jquery.autocomplete.js") !!}
+	{{-- {!! Html::script("js/jquery.mockjax.js") !!} --}}
+	{{-- {!! Html::script("js/jquery.autocomplete.js") !!} --}}
 	{!! Html::script("js/usastates.js") !!}
-	{!! Html::script("js/autocomplete-demo.js") !!}
+	{{-- {!! Html::script("js/autocomplete-demo.js") !!} --}}
 	{!! Html::script("js/sweetalert.min.js") !!}
 	<script>
 		$(document).ready(function() {
@@ -98,8 +98,19 @@
 						return false;
 					}
 				}
-				
+
 			});
+			$( "#category_id").on('change',function(e){
+				var cat_id = e.target.value;
+
+				$.get('/ajax_subcat/'+cat_id, function(data) {
+					$( "#sub_category_id").empty();
+					$.each(data, function(index, subcat) {
+						$( "#sub_category_id").append('<option value="'+subcat.name+'">'+subcat.name+'</option>');
+					});
+				});
+			});
+
 		});
 	</script>
 
@@ -108,5 +119,5 @@
 
 
 
-</body>	
+</body>
 </html>
